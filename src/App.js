@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import Statistics from './components/Statistics';
+import Section from './components/Section';
 class App extends Component {
   state = {
     good: 3,
@@ -8,7 +9,7 @@ class App extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state; //
+    const { good, neutral, bad } = this.state;
 
     const countTotalFeedback = Object.values(this.state).reduce(
       (acc, item) => acc + item,
@@ -25,31 +26,22 @@ class App extends Component {
 
     return (
       <>
-        <div className="feedback">
-          <h1>Please leave feedback</h1>
+        <Section title="Please leave feedback">
+          {/* <FeedbackOptions
+                      options={ }
+                      onLeaveFeedback={ }>
+                  </FeedbackOptions> */}
+        </Section>
 
-          <div className="btnBlock">
-            <button type="button" className="btn">
-              Good
-            </button>
-            <button type="button" className="btn">
-              Neutral
-            </button>
-            <button type="button" className="btn">
-              Bad
-            </button>
-          </div>
-
-          <h2>Statistics</h2>
-
-          <div className="stat">
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Total: {countTotalFeedback}</p>
-            <p>Pozitive feedback: {countPositiveFeedbackPercentage}%</p>
-          </div>
-        </div>
+        <Section title="Statistics">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={countTotalFeedback}
+            positivePercentage={countPositiveFeedbackPercentage}
+          ></Statistics>
+        </Section>
       </>
     );
   }
