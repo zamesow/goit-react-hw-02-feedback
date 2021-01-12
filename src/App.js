@@ -28,7 +28,7 @@ class App extends Component {
     return percentage;
   }
 
-  //   инкремент
+  //   increment
   onFeedback = ({ target }) => {
     const type = target.dataset.action;
 
@@ -43,6 +43,7 @@ class App extends Component {
 
     return (
       <>
+        {/* buttons */}
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
@@ -51,6 +52,7 @@ class App extends Component {
         </Section>
 
         <Section title="Statistics">
+          {/* message "No feedback given"*/}
           {this.countPositiveFeedbackPercentage() !== 0 ? (
             <Statistics
               good={good}
