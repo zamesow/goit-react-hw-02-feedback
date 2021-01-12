@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Statistics(props) {
-  const { title, good, neutral, bad, total, positivePercentage } = props;
+  const { good, neutral, bad, total, positivePercentage } = props;
 
   return (
     <div className="stat">
-      <h2>{title}</h2>
       <ul className="statList">
         <li>
           <p>Good: {good}</p>
@@ -26,5 +26,9 @@ function Statistics(props) {
     </div>
   );
 }
+
+Statistics.propTypes = {
+  props: PropTypes.objectOf(PropTypes.number).isRequired,
+};
 
 export default Statistics;

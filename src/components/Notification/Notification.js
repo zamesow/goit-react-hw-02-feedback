@@ -1,7 +1,12 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// function Notification() {
-//     console.log(123);
-// };
+function Notification({ message }) {
+  return <p>{message}</p>;
+}
 
-// export default Notification;
+Notification.propTypes = {
+  message: PropTypes.string,
+};
+
+export default Notification;
