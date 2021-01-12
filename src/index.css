@@ -12,29 +12,15 @@ code {
     monospace;
 }
 
-.feedback {
-  width: 350px;
-  padding: 10px;
-  margin: auto;
-
-  border: 2px solid rgb(211, 211, 211);
-}
-
-h1,
-h2 {
-  text-align: center;
-}
-
-.btnBlock {
-  display: flex;
-  justify-content: center;
-}
-
 .btn {
   margin-right: 15px;
   margin-left: 15px;
 }
 
 .stat {
-  margin: auto;
+  text-align: left;
+}
+
+.statList {
+  list-style: none;
 }

@@ -4,9 +4,9 @@ function Statistics(props) {
   const { title, good, neutral, bad, total, positivePercentage } = props;
 
   return (
-    <div>
+    <div className="stat">
       <h2>{title}</h2>
-      <ul className="stat">
+      <ul className="statList">
         <li>
           <p>Good: {good}</p>
         </li>
